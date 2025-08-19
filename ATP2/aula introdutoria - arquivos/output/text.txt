@@ -1,0 +1,4 @@
+Nome	Nota Prova	Nota Trabalho	Média
+Duda	10.00	10.00	10.00
+Vitor	6.00	8.00	7.00
+nao sei	0.00	0.00	0.00
