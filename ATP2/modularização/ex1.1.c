@@ -17,7 +17,7 @@ int main () {
 
     int quantidade;
 
-    printf("Digite o tamanho da árvore: (ex.: 5)\n");
+    printf("Digite o tamanho da arvore: (ex.: 5)\n");
     scanf("%d", &quantidade);
 
     arvoreAsteriscos(quantidade);
@@ -33,6 +33,11 @@ void arvoreAsteriscos(int quantidade) {
     }
 
     for (int i = 1; i <= quantidade; i++) {
+
+        for (int espaco = 1; espaco <= quantidade - i; espaco++) {
+            printf(" ");
+        }
+
         for (int j = 1; j <= (2 * i - 1); j++) {
             printf("*");
         }
