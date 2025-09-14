@@ -16,7 +16,7 @@ int main() {
 
 void binario(int n) {
     if (n == 0) {
-        return;
+        printf("%d", n);
     } else {
         binario(n/2);
         printf("%d", n % 2);
