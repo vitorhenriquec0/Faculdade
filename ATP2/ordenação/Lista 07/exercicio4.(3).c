@@ -40,7 +40,7 @@ void ShellSortKnuth(int n, int v[]) {
 
             int j;
             for (j = i; j >= gap && v[j - gap] > temp; j -= gap) {
-            v[j] = v[j - gap];
+                v[j] = v[j - gap];
             }
             v[j] = temp;
         }
