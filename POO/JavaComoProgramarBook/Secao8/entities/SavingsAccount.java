@@ -13,28 +13,27 @@ taxa do próximo mês e imprima os novos saldos para os dois poupadores.
 package POO.JavaComoProgramarBook.Secao8.entities;
 
 public class SavingsAccount {
-    static int annuaInterestRate;
+    static double annualInterestRate;
     private double savingsBalance;
     
-    public SavingsAccount(int annuaInterestRate, double savingsBalance) {
-        SavingsAccount.annuaInterestRate = annuaInterestRate;
+    public SavingsAccount(double savingsBalance) {
         this.savingsBalance = savingsBalance;
     }
 
     public void calculateMonthlyInterest() {
-        this.savingsBalance += (getSavingsBalance() * getAnnuaInterestRate()) / 12;
+        this.savingsBalance += (getSavingsBalance() * (getAnnualInterestRate() / 100)) / 12;
     }
 
-    public static void modifyInterestRate(int newAnnualInterestRate) {
-        SavingsAccount.annuaInterestRate = newAnnualInterestRate;
+    public static void modifyInterestRate(double newAnnualInterestRate) {
+        SavingsAccount.annualInterestRate = newAnnualInterestRate;
     }
 
-    public static int getAnnuaInterestRate() {
-        return annuaInterestRate;
+    public static double getAnnualInterestRate() {
+        return annualInterestRate;
     }
 
-    public static void setAnnuaInterestRate(int annuaInterestRate) {
-        SavingsAccount.annuaInterestRate = annuaInterestRate;
+    public static void setAnnualInterestRate(double annualInterestRate) {
+        SavingsAccount.annualInterestRate = annualInterestRate;
     }
 
     public double getSavingsBalance() {
