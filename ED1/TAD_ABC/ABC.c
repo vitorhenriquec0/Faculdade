@@ -9,17 +9,8 @@ typedef struct {
     int tamanho;
 } ABC;
 
-ABC* criarABC() {
-    ABC* arvore = (ABC*) malloc(sizeof(ABC));
-    if (arvore == NULL) {
-        return NULL;
-    }
-    arvore->tamanho = 0;
-    return arvore;
-}
-
 void carregarABC(ABC* arvore, int h) {
-    if (h < 0) {
+    if (h <= 0) {
         printf("Erro: altura invalida.\n");
         return;
     }
@@ -66,22 +57,22 @@ void posOrdem(ABC* arvore, int i) {
 }
 
 int main() {
-    ABC* arvore = criarABC();
+    ABC arvore;
+    arvore.tamanho = 0;
     int altura;
 
     printf("Digite a altura da ABC: ");
     scanf("%d", &altura);
 
-    carregarABC(arvore, altura);
+    carregarABC(&arvore, altura);
 
-    preOrdem(arvore, 1);
+    preOrdem(&arvore, 1);
     printf("\n");
 
-    emOrdem(arvore, 1);
+    emOrdem(&arvore, 1);
     printf("\n");
 
-    posOrdem(arvore, 1);
+    posOrdem(&arvore, 1);
 
-    free(arvore);
     return 0;
 }
