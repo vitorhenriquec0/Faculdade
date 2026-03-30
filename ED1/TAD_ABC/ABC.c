@@ -1,13 +1,13 @@
+// Atividade ED1
+
+// Mariana Elias
+// Vítor Henrique Cardoso
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "ABC.h"
 
-#define MAX 100
-
-typedef struct {
-    int nos[MAX];
-    int tamanho;
-} ABC;
 
 void carregarABC(ABC* arvore, int h) {
     if (h <= 0) {
@@ -54,25 +54,4 @@ void posOrdem(ABC* arvore, int i) {
     posOrdem(arvore, 2 * i);
     posOrdem(arvore, 2 * i + 1);
     printf("%d " , arvore->nos[i]);
-}
-
-int main() {
-    ABC arvore;
-    arvore.tamanho = 0;
-    int altura;
-
-    printf("Digite a altura da ABC: ");
-    scanf("%d", &altura);
-
-    carregarABC(&arvore, altura);
-
-    preOrdem(&arvore, 1);
-    printf("\n");
-
-    emOrdem(&arvore, 1);
-    printf("\n");
-
-    posOrdem(&arvore, 1);
-
-    return 0;
 }
