@@ -1,3 +1,8 @@
+// Atividade ED1
+
+// Mariana Elias
+// Vítor Henrique Cardoso
+
 #include <stdio.h>
 #include "ABC.h"
 

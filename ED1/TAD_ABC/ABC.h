@@ -1,3 +1,8 @@
+// Atividade ED1
+
+// Mariana Elias
+// Vítor Henrique Cardoso
+
 #ifndef ABC_H
 #define ABC_H
 
