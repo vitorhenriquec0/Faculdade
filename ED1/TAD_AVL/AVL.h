@@ -17,19 +17,15 @@ typedef struct no
  
 typedef struct no *tree;
 
-// Cria uma  AVL vazia
 tree Definir(void);
  
-// Verifica se a árvore é vazia
 bool Vazia(tree t);
  
 // Define nó raiz (com altura inicializada em 1)
 tree Criar_raiz(tipo_dado elem);
  
-// Retorna a altura (profundidade) da árvore
 int Altura(tree t);
  
-// Retorna o número de nós da árvore
 int Numero_nos(tree t);
  
 // (|altE - altD| <= 1 em todo nó)
@@ -44,39 +40,30 @@ void In_ordem(tree t);
  
 void Pos_ordem(tree t);
  
-// Visita um nó (imprime seu conteúdo)
 void Visita(tree t);
  
-// Busca recursiva: retorna ponteiro para o nó encontrado, ou NULL
 tree Busca_r(tree raiz, tipo_dado elem);
  
-// Busca não-recursiva: retorna ponteiro para o nó encontrado, ou NULL
 tree Busca_nr(tree raiz, tipo_dado elem);
  
-
 // Retorna a altura armazenada no nó (0 se NULL)
 int altura_no(tree n);
  
-// Retorna o fator de balanceamento do nó (altura_dir - altura_esq)
+// (altura_dir - altura_esq)
 int fator_balanceamento(tree n);
  
-// Rot. simples à direita
 tree rotacao_direita(tree y);
  
-// Rot. simples à esquerda
 tree rotacao_esquerda(tree x);
  
- 
-// Busca e insere na AVL mantendo o balanceamento.
-// Retorna ponteiro para a raiz da nova AVL.
+// bbusca e insere na avl mantendo o balanceamento
+// retorna ponteiro para a raiz da nova avl
 tree Busca_insere_AVL(tree raiz, tipo_dado elem);
  
-// Retorna o menor nó da subárvore (caminha sempre para a esquerda)
 tree Busca_menor_a_esquerda(tree node);
  
-// Busca e remove na AVL mantendo o balanceamento.
-// Retorna ponteiro para a raiz da nova AVL.
+// busca e remove na avlmantendo o balanceamento
+// retorna ponteiro para a raiz da nova avl
 tree Busca_remove_AVL(tree raiz, tipo_dado elem);
  
-// Libera toda a memória da árvore
 void Libera(tree t);
